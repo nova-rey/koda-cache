@@ -1,0 +1,24 @@
+{
+  "schema": "koda.r0.device-allowlist.v1",
+  "device": {
+    "volume_guid": "\\\\?\\Volume{EXAMPLE-GUID}\\",
+    "volume_serial": "EXAMPLE-VOLUME-SERIAL",
+    "disk_guid": "EXAMPLE-GPT-DISK-GUID",
+    "storage_duid": "EXAMPLE-STORAGE-DUID",
+    "model": "DISPOSABLE-ONLY",
+    "device_serial": "EXAMPLE-DEVICE-SERIAL",
+    "bus": "Azure-LUN-0-or-physical",
+    "path": "\\\\.\\PhysicalDriveN",
+    "length_bytes": 33554432,
+    "logical_sector_bytes": 512,
+    "physical_sector_bytes": 4096,
+    "azure_lun": 0,
+    "label": "KODA-R0-DISPOSABLE"
+  },
+  "reserved": {
+    "offset_bytes": 1048576,
+    "length_bytes": 67108864,
+    "record_bytes": 131072
+  },
+  "forbidden_device_fingerprints": ["OS-DISK-FINGERPRINT-REDACTED"]
+}

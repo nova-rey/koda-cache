@@ -1,0 +1,11 @@
+# KODA R0 evidence and execution
+
+R0 is in progress. This directory records the reproducible architecture-feasibility experiment; it is not production KODA code.
+
+The required order is: Azure catalog preflight, Azure WHP gate, regular-image harness proof, disposable-disk inventory and allowlist, ownership cycles, bounded failures, integrity validation, and closure decision.
+
+No data disk may be attached before `AZURE_WHP_PASS`. Current planning execution has authenticated Azure CLI access, but live catalog requests timed out, so no Azure resources have been provisioned and no terminal R0 status is claimed.
+
+Raw output belongs under ignored `out/r0/`. Only redacted, hashed, machine-readable evidence belongs under `docs/r0/evidence/`.
+
+The host spike is under `tools/r0-host/`; the guest helper is under `guest/r0/`. The harness refuses non-Windows execution for destructive operations and must never be treated as a production service.
