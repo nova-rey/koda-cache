@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.service text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.iso binary
+*.img binary
+*.qcow2 binary
+*.raw binary
+*.vhd binary
+*.vhdx binary
+

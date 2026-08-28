@@ -1,0 +1,45 @@
+# Rust / Cargo
+/target/
+**/target/
+# .NET / Visual Studio
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Linux/Alpine and generated appliance output
+*.iso
+*.img
+*.qcow2
+*.raw
+*.vhd
+*.vhdx
+/build/
+/dist/
+/out/
+
+# Logs, benchmarks, and temporary output
+*.log
+/logs/
+/benchmarks/
+/tmp/
+*.bench
+*.perf
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
