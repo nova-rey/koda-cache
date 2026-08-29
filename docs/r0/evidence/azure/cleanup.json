@@ -1,0 +1,8 @@
+{
+  "schema": "koda.r0.azure-cleanup.v1",
+  "resource_group": "koda-r0-a-20260828-ipv4",
+  "delete_submitted": true,
+  "group_exists_after_settle": false,
+  "secondary_data_disk_attached": false,
+  "captured_utc": "2026-08-29"
+}

@@ -49,3 +49,9 @@ one temporary Standard_D2s_v5 Windows VM without a data disk. Azure Run Command
 remained stuck across restart/deallocate-start recovery, so WHP could not be
 probed. The temporary resource-group deletion was submitted; R0 is
 `R0_REQUIRES_BARE_METAL`, not a VMM rejection.
+
+## 2026-08-29 — R0 Azure cleanup confirmed
+
+The disposable Azure resource group eventually reported `exists=false`; no
+secondary data disk had been attached. The R0 result and sanitized cleanup
+evidence are committed and the feature branch is published for review.

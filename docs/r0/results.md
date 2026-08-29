@@ -16,8 +16,9 @@ Consequently no WHP capability probe, stock smolvm boot, disk attachment, or
 destructive storage operation occurred. This is an Azure execution-environment
 block, not evidence that libkrun or KODA is unsuitable.
 
-The temporary resource-group deletion was submitted with `--no-wait`; verify
-absence with the IPv4 wrapper before treating Azure cleanup as complete.
+The temporary resource group was deleted and `group exists` returned `false`
+after the deletion operation settled. No Azure VM, OS disk, network resource,
+or secondary data disk remains from this attempt.
 
 Remaining R0 work requires a bare-metal Windows 11 host: WHP/libkrun boot,
 allowlisted disposable-device handoff, 100 consecutive cycles, bounded failure
