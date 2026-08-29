@@ -121,6 +121,17 @@ Result VolumeOwnership::return_to_windows(const Allowlist& allowlist,
   evidence_.record(State::GuestIoComplete, "guest report", "ok");
   evidence_.record(State::GuestFlushed, "guest fsync", "ok");
   evidence_.record(State::GuestReleased, "guest close", "ok");
+  // Before changing the volume state, require an exclusive reopen of the
+  // allowlisted raw namespace. This is the positive host-side evidence that
+  // no guest/VMM handle remains. A failed or ambiguous probe fails closed.
+  const auto raw_path = wide(allowlist.device.path);
+  HANDLE reopen = CreateFileW(raw_path.c_str(), GENERIC_READ | GENERIC_WRITE,
+                              0, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL,
+                              nullptr);
+  if (reopen == INVALID_HANDLE_VALUE)
+    return Result{false, "exclusive raw reopen failed; refusing Windows online", GetLastError()};
+  evidence_.record(State::WindowsReopen, "exclusive raw reopen", "ok");
+  CloseHandle(reopen);
   DWORD returned = 0;
   if (!DeviceIoControl(static_cast<HANDLE>(volume_handle_), IOCTL_VOLUME_ONLINE,
                        nullptr, 0, nullptr, 0, &returned, nullptr))
@@ -131,10 +142,9 @@ Result VolumeOwnership::return_to_windows(const Allowlist& allowlist,
     return Result{false, "closing volume handle failed", GetLastError()};
   volume_handle_ = nullptr;
   locked_ = false;
-  evidence_.record(State::WindowsMounted, "volume reopen", "required");
-  evidence_.record(State::NtfsVerified, "filesystem validation", "required");
-  (void)allowlist;
-  return Result{true, "volume returned to Windows; validation remains required", 0};
+  // Mount-manager/NTFS validation is deliberately a required external step;
+  // this method never reports it as successful without observed evidence.
+  return Result{false, "volume online; remount and NTFS validation are required", 0};
 #else
   (void)allowlist;
   return Result{false, "Windows ownership operations require Windows", 0};

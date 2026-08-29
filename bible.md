@@ -15,6 +15,13 @@ that the volume is not mounted only after the required lock-and-dismount sequenc
 This remains a compile-guarded feasibility spike; no Windows or destructive
 storage operation has been run from this checkout.
 
+## 2026-08-28 — R0 fail-closed reclaim gate
+
+Reclaim now requires an exclusive reopen of the allowlisted raw namespace before
+bringing the volume online, and it does not claim remount or NTFS validation
+success without separate evidence. This is untested on Windows pending the WHP
+gate; no storage was touched.
+
 ## 2026-08-28 — R0 integrity cadence
 
 Added the read-only integrity cadence and explicit PASS/FAIL/INCONCLUSIVE

@@ -15,3 +15,8 @@ Integrity cadence and PASS/FAIL/INCONCLUSIVE rules are defined in
 consecutive successful handoff cycles; infrastructure interruptions before a
 cycle begins do not reset the streak only when Windows ownership remains
 positively established.
+
+The ownership implementation fails closed if the exclusive raw reopen cannot be
+proved. Bringing a volume online is not treated as a completed return: remount,
+identity validation, hash checks, and non-repairing `chkdsk /scan` must supply
+separate evidence before a cycle can pass.
