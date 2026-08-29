@@ -27,3 +27,9 @@ gate; no storage was touched.
 Added the read-only integrity cadence and explicit PASS/FAIL/INCONCLUSIVE
 classification required for the 100-cycle handoff streak. No repair operation,
 Windows device, or Azure resource was used.
+
+## 2026-08-28 — R0 WHP capability probe
+
+Added a read-only PowerShell WHP capability/partition/vCPU probe for the Azure
+gate. It creates no VM or disk and records HRESULTs plus an explicit gate result;
+PowerShell execution remains pending on a Windows host.
