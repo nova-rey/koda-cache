@@ -20,6 +20,11 @@ The temporary resource group was deleted and `group exists` returned `false`
 after the deletion operation settled. No Azure VM, OS disk, network resource,
 or secondary data disk remains from this attempt.
 
+The independent final audit found no evidence contradiction, but required richer
+machine-readable Azure artifacts. Those are now recorded in `vm-profile.json`,
+`run-command-attempts.json`, and `resource-groups-post-cleanup.json`; the earlier
+`resource-groups.json` is explicitly pre-provisioning evidence.
+
 Remaining R0 work requires a bare-metal Windows 11 host: WHP/libkrun boot,
 allowlisted disposable-device handoff, 100 consecutive cycles, bounded failure
 tests, integrity/reboot validation, and the final libkrun decision.

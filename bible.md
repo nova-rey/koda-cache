@@ -55,3 +55,10 @@ probed. The temporary resource-group deletion was submitted; R0 is
 The disposable Azure resource group eventually reported `exists=false`; no
 secondary data disk had been attached. The R0 result and sanitized cleanup
 evidence are committed and the feature branch is published for review.
+
+## 2026-08-29 — R0 Azure evidence audit
+
+Added sanitized VM profile, Run Command attempt/recovery log, and explicit
+post-cleanup resource-group evidence after the independent final audit. These
+artifacts distinguish preflight emptiness from post-cleanup emptiness and retain
+the bounded Azure guest-execution failure without claiming WHP behavior.

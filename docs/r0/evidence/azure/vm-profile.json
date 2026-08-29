@@ -1,0 +1,13 @@
+{
+  "schema": "koda.r0.azure-vm-profile.v1",
+  "resource_group": "koda-r0-a-20260828-ipv4",
+  "vm_name": "koda-r0-win11",
+  "region": "westcentralus",
+  "size": "Standard_D2s_v5",
+  "security_type": "Standard",
+  "image": "MicrosoftWindowsDesktop:windows-11:win11-24h2-pro:26100.9168.260809",
+  "power_state_observed": "VM running",
+  "secondary_data_disk_attached": false,
+  "whp_probe_executed": false,
+  "captured_utc": "2026-08-29"
+}
