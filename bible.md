@@ -14,3 +14,9 @@ The Windows ownership seam now records `FlushFileBuffers` explicitly and verifie
 that the volume is not mounted only after the required lock-and-dismount sequence.
 This remains a compile-guarded feasibility spike; no Windows or destructive
 storage operation has been run from this checkout.
+
+## 2026-08-28 — R0 integrity cadence
+
+Added the read-only integrity cadence and explicit PASS/FAIL/INCONCLUSIVE
+classification required for the 100-cycle handoff streak. No repair operation,
+Windows device, or Azure resource was used.
