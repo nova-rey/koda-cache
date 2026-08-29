@@ -77,3 +77,10 @@ ran the WHP probe twice. `WHvGetCapability(HypervisorPresent)` returned value 0
 with HRESULT 0 on both initial and post-deallocate/start attempts. No data disk
 was attached; Azure is conclusively unsuitable for this WHP gate and R0 requires
 bare-metal continuation.
+
+## 2026-08-29 — R0 Azure WHP gate conclusively blocked
+
+The direct Custom Script Extension probe ran inside the recreated Azure VM and
+reported `WHvCapabilityCodeHypervisorPresent=false` with HRESULT 0 both before
+and after deallocate/start. The VM used no data disk and was deleted afterward;
+R0 remains a bare-metal requirement rather than a libkrun rejection.
