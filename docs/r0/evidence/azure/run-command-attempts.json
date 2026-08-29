@@ -1,0 +1,18 @@
+{
+  "schema": "koda.r0.azure-run-command-attempts.v1",
+  "vm_name": "koda-r0-win11",
+  "bootstrap": {
+    "script": "scripts/r0/windows-bootstrap.ps1",
+    "outcome": "stuck_on_prior_vm",
+    "evidence": "subsequent invocation returned Conflict: Run command extension execution is in progress"
+  },
+  "recovery": [
+    { "action": "vm restart", "outcome": "VM returned to running" },
+    { "action": "vm deallocate/start", "outcome": "VM returned to running" },
+    { "action": "simple Write-Output probe", "outcome": "hung or Conflict; no guest output" }
+  ],
+  "direct_extension_probe": "completed_twice",
+  "run_command_used_for_whp_probe": false,
+  "classification": "AZURE_WHP_BLOCKED",
+  "captured_utc": "2026-08-29"
+}

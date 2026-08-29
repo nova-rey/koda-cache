@@ -1,0 +1,360 @@
+{
+  "value": [
+    {
+      "resourceType": "virtualMachines",
+      "name": "Standard_D2s_v4",
+      "tier": "Standard",
+      "size": "D2s_v4",
+      "family": "standardDSv4Family",
+      "locations": [
+        "eastus"
+      ],
+      "locationInfo": [
+        {
+          "location": "eastus",
+          "zones": [
+            "3",
+            "2",
+            "1"
+          ],
+          "zoneDetails": [
+            {
+              "Name": [
+                "3",
+                "2",
+                "1"
+              ],
+              "capabilities": [
+                {
+                  "name": "UltraSSDAvailable",
+                  "value": "True"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "MaxResourceVolumeMB",
+          "value": "0"
+        },
+        {
+          "name": "OSVhdSizeMB",
+          "value": "1047552"
+        },
+        {
+          "name": "vCPUs",
+          "value": "2"
+        },
+        {
+          "name": "MemoryPreservingMaintenanceSupported",
+          "value": "True"
+        },
+        {
+          "name": "HyperVGenerations",
+          "value": "V1,V2"
+        },
+        {
+          "name": "SupportedCapacityReservationTypes",
+          "value": "Open,Targeted"
+        },
+        {
+          "name": "MemoryGB",
+          "value": "8"
+        },
+        {
+          "name": "MaxDataDiskCount",
+          "value": "4"
+        },
+        {
+          "name": "CpuArchitectureType",
+          "value": "x64"
+        },
+        {
+          "name": "LowPriorityCapable",
+          "value": "True"
+        },
+        {
+          "name": "PremiumIO",
+          "value": "True"
+        },
+        {
+          "name": "VMDeploymentTypes",
+          "value": "IaaS"
+        },
+        {
+          "name": "vCPUsConstraintsAllowed",
+          "value": "1, 2"
+        },
+        {
+          "name": "vCPUsAvailable",
+          "value": "2"
+        },
+        {
+          "name": "ACUs",
+          "value": "195"
+        },
+        {
+          "name": "vCPUsPerCore",
+          "value": "2"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedIOPS",
+          "value": "19000"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedReadBytesPerSecond",
+          "value": "120586240"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedWriteBytesPerSecond",
+          "value": "120586240"
+        },
+        {
+          "name": "CachedDiskBytes",
+          "value": "53687091200"
+        },
+        {
+          "name": "UncachedDiskIOPS",
+          "value": "3200"
+        },
+        {
+          "name": "UncachedDiskBytesPerSecond",
+          "value": "48000000"
+        },
+        {
+          "name": "EphemeralOSDiskSupported",
+          "value": "False"
+        },
+        {
+          "name": "EncryptionAtHostSupported",
+          "value": "True"
+        },
+        {
+          "name": "CapacityReservationSupported",
+          "value": "False"
+        },
+        {
+          "name": "AcceleratedNetworkingEnabled",
+          "value": "True"
+        },
+        {
+          "name": "RdmaEnabled",
+          "value": "False"
+        },
+        {
+          "name": "MaxNetworkInterfaces",
+          "value": "2"
+        }
+      ],
+      "restrictions": [
+        {
+          "type": "Location",
+          "values": [
+            "eastus"
+          ],
+          "restrictionInfo": {
+            "locations": [
+              "eastus"
+            ]
+          },
+          "reasonCode": "NotAvailableForSubscription"
+        },
+        {
+          "type": "Zone",
+          "values": [
+            "eastus"
+          ],
+          "restrictionInfo": {
+            "locations": [
+              "eastus"
+            ],
+            "zones": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "reasonCode": "NotAvailableForSubscription"
+        }
+      ]
+    },
+    {
+      "resourceType": "virtualMachines",
+      "name": "Standard_D2s_v5",
+      "tier": "Standard",
+      "size": "D2s_v5",
+      "family": "standardDSv5Family",
+      "locations": [
+        "eastus"
+      ],
+      "locationInfo": [
+        {
+          "location": "eastus",
+          "zones": [
+            "3",
+            "2",
+            "1"
+          ],
+          "zoneDetails": [
+            {
+              "Name": [
+                "3",
+                "2",
+                "1"
+              ],
+              "capabilities": [
+                {
+                  "name": "UltraSSDAvailable",
+                  "value": "True"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "capabilities": [
+        {
+          "name": "MaxResourceVolumeMB",
+          "value": "0"
+        },
+        {
+          "name": "OSVhdSizeMB",
+          "value": "1047552"
+        },
+        {
+          "name": "vCPUs",
+          "value": "2"
+        },
+        {
+          "name": "MemoryPreservingMaintenanceSupported",
+          "value": "True"
+        },
+        {
+          "name": "HyperVGenerations",
+          "value": "V1,V2"
+        },
+        {
+          "name": "SupportedCapacityReservationTypes",
+          "value": "Open,Targeted"
+        },
+        {
+          "name": "MemoryGB",
+          "value": "8"
+        },
+        {
+          "name": "MaxDataDiskCount",
+          "value": "4"
+        },
+        {
+          "name": "CpuArchitectureType",
+          "value": "x64"
+        },
+        {
+          "name": "LowPriorityCapable",
+          "value": "True"
+        },
+        {
+          "name": "HibernationSupported",
+          "value": "True"
+        },
+        {
+          "name": "PremiumIO",
+          "value": "True"
+        },
+        {
+          "name": "VMDeploymentTypes",
+          "value": "IaaS"
+        },
+        {
+          "name": "vCPUsConstraintsAllowed",
+          "value": "1, 2"
+        },
+        {
+          "name": "vCPUsAvailable",
+          "value": "2"
+        },
+        {
+          "name": "vCPUsPerCore",
+          "value": "2"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedIOPS",
+          "value": "9000"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedReadBytesPerSecond",
+          "value": "125000000"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedWriteBytesPerSecond",
+          "value": "125000000"
+        },
+        {
+          "name": "UncachedDiskIOPS",
+          "value": "3750"
+        },
+        {
+          "name": "UncachedDiskBytesPerSecond",
+          "value": "85000000"
+        },
+        {
+          "name": "EphemeralOSDiskSupported",
+          "value": "False"
+        },
+        {
+          "name": "EncryptionAtHostSupported",
+          "value": "True"
+        },
+        {
+          "name": "CapacityReservationSupported",
+          "value": "False"
+        },
+        {
+          "name": "AcceleratedNetworkingEnabled",
+          "value": "True"
+        },
+        {
+          "name": "RdmaEnabled",
+          "value": "False"
+        },
+        {
+          "name": "MaxNetworkInterfaces",
+          "value": "2"
+        }
+      ],
+      "restrictions": [
+        {
+          "type": "Location",
+          "values": [
+            "eastus"
+          ],
+          "restrictionInfo": {
+            "locations": [
+              "eastus"
+            ]
+          },
+          "reasonCode": "NotAvailableForSubscription"
+        },
+        {
+          "type": "Zone",
+          "values": [
+            "eastus"
+          ],
+          "restrictionInfo": {
+            "locations": [
+              "eastus"
+            ],
+            "zones": [
+              "1",
+              "2",
+              "3"
+            ]
+          },
+          "reasonCode": "NotAvailableForSubscription"
+        }
+      ]
+    }
+  ]
+}

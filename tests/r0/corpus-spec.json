@@ -1,0 +1,13 @@
+{
+  "schema": "koda.r0.corpus.v1",
+  "volume_label": "KODA-R0-DISPOSABLE",
+  "seed": "KODA-R0-corpus-seed-v1",
+  "files": [
+    {"path": "empty.bin", "bytes": 0},
+    {"path": "one-byte.bin", "bytes": 1},
+    {"path": "small.bin", "bytes": 4096},
+    {"path": "unaligned.bin", "bytes": 65537},
+    {"path": "large.bin", "bytes": 1048576}
+  ],
+  "rule": "bytes are generated deterministically from seed and path; record SHA-256"
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "koda.r0.azure-resource-groups.v1",
+  "query_phase": "post-cleanup",
+  "resource_group": "koda-r0-a-20260829-rdp",
+  "exists": false,
+  "secondary_data_disk_attached": false,
+  "previous_gate_resource_group": "koda-r0-a-20260828-ipv4",
+  "captured_utc": "2026-08-29"
+}
