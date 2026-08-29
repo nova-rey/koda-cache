@@ -1,10 +1,15 @@
 # KODA R0 evidence and execution
 
-R0 is in progress. This directory records the reproducible architecture-feasibility experiment; it is not production KODA code.
+R0 Azure execution reached `R0_REQUIRES_BARE_METAL`; this directory records the
+reproducible architecture-feasibility experiment and is not production KODA
+code.
 
 The required order is: Azure catalog preflight, Azure WHP gate, regular-image harness proof, disposable-disk inventory and allowlist, ownership cycles, bounded failures, integrity validation, and closure decision.
 
-No data disk may be attached before `AZURE_WHP_PASS`. Current planning execution has authenticated Azure CLI access, but live catalog requests timed out, so no Azure resources have been provisioned and no terminal R0 status is claimed.
+No data disk was attached because `AZURE_WHP_PASS` was not established. Azure
+catalog access was recovered over IPv4, but the temporary VM's guest Run Command
+channel remained stuck; see [`results.md`](results.md). No raw device was
+touched.
 
 Raw output belongs under ignored `out/r0/`. Only redacted, hashed, machine-readable evidence belongs under `docs/r0/evidence/`.
 
