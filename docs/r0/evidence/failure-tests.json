@@ -1,0 +1,5 @@
+{
+  "schema": "koda.r0.failure-tests.v1",
+  "status": "NOT_RUN",
+  "reason": "No guest ownership cycle was possible"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "koda.r0.azure-whp.v1",
+  "result": "AZURE_WHP_BLOCKED_GUEST_EXECUTION",
+  "vm_profile": "vm-profile.json",
+  "probe_executed": false,
+  "reason": "Azure Run Command remained stuck or conflicted after restart and deallocate/start recovery",
+  "stock_smolvm_boot": "not_attempted",
+  "data_disk_attached": false,
+  "captured_utc": "2026-08-29"
+}

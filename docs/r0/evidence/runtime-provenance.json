@@ -1,0 +1,8 @@
+{
+  "schema": "koda.r0.runtime-provenance.v1",
+  "smolvm": { "version": "v1.13.1", "commit": "62f5f04bcb4fc097cca55cffa5772a32093f4636" },
+  "bundled_libkrun": "2dfbd6fb6a1acf50413b64009b90fed8c589c9c3",
+  "bundled_libkrunfw": "8f1307644bdcb95fe1343bf0d6ccf30aa22f1549",
+  "tested_guest_boot": false,
+  "libkrun_patch_applied": false
+}

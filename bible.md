@@ -62,3 +62,10 @@ Added sanitized VM profile, Run Command attempt/recovery log, and explicit
 post-cleanup resource-group evidence after the independent final audit. These
 artifacts distinguish preflight emptiness from post-cleanup emptiness and retain
 the bounded Azure guest-execution failure without claiming WHP behavior.
+
+## 2026-08-29 — R0 closure evidence index
+
+Added the final source-analysis notes, explicit Azure WHP-blocked record,
+runtime provenance, not-run cycle/failure/integrity records, and SHA-256 evidence
+index. The artifacts make the bare-metal continuation requirement auditable
+without converting absent execution into a false pass.
