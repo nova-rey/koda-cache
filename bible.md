@@ -84,3 +84,9 @@ The direct Custom Script Extension probe ran inside the recreated Azure VM and
 reported `WHvCapabilityCodeHypervisorPresent=false` with HRESULT 0 both before
 and after deallocate/start. The VM used no data disk and was deleted afterward;
 R0 remains a bare-metal requirement rather than a libkrun rejection.
+
+## 2026-08-29 — R0 evidence checksum refresh
+
+Refreshed the SHA-256 manifest after the repeated Azure WHP result and cleanup
+evidence updates. The branch remains cleanly reproducible with no Azure resources
+retained.
