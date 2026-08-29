@@ -1,10 +1,15 @@
 {
   "schema": "koda.r0.azure-whp.v1",
-  "result": "AZURE_WHP_BLOCKED_GUEST_EXECUTION",
+  "result": "AZURE_WHP_BLOCKED",
   "vm_profile": "vm-profile.json",
-  "probe_executed": false,
-  "reason": "Azure Run Command remained stuck or conflicted after restart and deallocate/start recovery",
-  "stock_smolvm_boot": "not_attempted",
+  "probe_executed": true,
+  "access_path": "CustomScriptExtension over direct RDP-enabled VM",
+  "attempts": [
+    { "phase": "initial", "timestamp_utc": "2026-08-29T12:59:36.2732794Z", "hypervisor_present_hresult": "0x00000000", "hypervisor_present_value": 0, "result": "AZURE_WHP_BLOCKED" },
+    { "phase": "after_deallocate_start", "timestamp_utc": "2026-08-29T13:02:45.4557413Z", "hypervisor_present_hresult": "0x00000000", "hypervisor_present_value": 0, "result": "AZURE_WHP_BLOCKED" }
+  ],
+  "reason": "WHvCapabilityCodeHypervisorPresent was false on both attempts",
+  "stock_smolvm_boot": "not_attempted_after_capability_failure",
   "data_disk_attached": false,
   "captured_utc": "2026-08-29"
 }

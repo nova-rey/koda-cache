@@ -69,3 +69,11 @@ Added the final source-analysis notes, explicit Azure WHP-blocked record,
 runtime provenance, not-run cycle/failure/integrity records, and SHA-256 evidence
 index. The artifacts make the bare-metal continuation requirement auditable
 without converting absent execution into a false pass.
+
+## 2026-08-29 — R0 direct Azure WHP gate
+
+IPv4-forced Azure provisioning and a direct Custom Script Extension guest path
+ran the WHP probe twice. `WHvGetCapability(HypervisorPresent)` returned value 0
+with HRESULT 0 on both initial and post-deallocate/start attempts. No data disk
+was attached; Azure is conclusively unsuitable for this WHP gate and R0 requires
+bare-metal continuation.
