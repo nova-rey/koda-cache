@@ -33,3 +33,11 @@ Windows device, or Azure resource was used.
 Added a read-only PowerShell WHP capability/partition/vCPU probe for the Azure
 gate. It creates no VM or disk and records HRESULTs plus an explicit gate result;
 PowerShell execution remains pending on a Windows host.
+
+## 2026-08-29 — R0 Azure IPv4 recovery
+
+IPv4-specific diagnostics isolated the Azure failure to the CLI's IPv6 path:
+IPv4 ARM/TLS and authenticated REST calls now work. The subscription catalog
+allows Standard_D2s_v5 in westcentralus and exposes Windows 11 24H2 Pro images.
+Added an in-process IPv4 Azure CLI wrapper and sanitized network/catalog evidence;
+no resources or disks were created.

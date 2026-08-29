@@ -1,0 +1,16 @@
+{
+  "schema": "koda.r0.azure-network.v1",
+  "management_host": "management.azure.com",
+  "dns": { "a_record_observed": true, "aaaa_record_observed": true },
+  "https": {
+    "ipv4_curl": "HTTP 400 MissingApiVersionParameter (TLS and routing succeeded)",
+    "ipv6_curl": "timeout after 15 seconds"
+  },
+  "azure_cli": {
+    "account_show": "pass",
+    "default_stack": "IPv6-prone/hangs on management calls",
+    "ipv4_wrapper": "scripts/r0/az-ipv4.sh"
+  },
+  "resources": "resource-group listing returned an empty list",
+  "captured_utc": "2026-08-29"
+}

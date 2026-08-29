@@ -1,0 +1,58 @@
+[
+  {
+    "location": "westcentralus",
+    "name": "Standard_D2s_v4",
+    "restrictions": [
+      "NotAvailableForSubscription"
+    ],
+    "capabilities": [
+      {
+        "name": "vCPUs",
+        "value": "2"
+      },
+      {
+        "name": "HyperVGenerations",
+        "value": "V1,V2"
+      },
+      {
+        "name": "MemoryGB",
+        "value": "8"
+      },
+      {
+        "name": "MaxDataDiskCount",
+        "value": "4"
+      },
+      {
+        "name": "CpuArchitectureType",
+        "value": "x64"
+      }
+    ]
+  },
+  {
+    "location": "westcentralus",
+    "name": "Standard_D2s_v5",
+    "restrictions": [],
+    "capabilities": [
+      {
+        "name": "vCPUs",
+        "value": "2"
+      },
+      {
+        "name": "HyperVGenerations",
+        "value": "V1,V2"
+      },
+      {
+        "name": "MemoryGB",
+        "value": "8"
+      },
+      {
+        "name": "MaxDataDiskCount",
+        "value": "4"
+      },
+      {
+        "name": "CpuArchitectureType",
+        "value": "x64"
+      }
+    ]
+  }
+]

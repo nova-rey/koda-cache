@@ -1,0 +1,54 @@
+[
+  {
+    "location": "eastus2",
+    "name": "Standard_D2s_v4",
+    "restrictions": [
+      "NotAvailableForSubscription",
+      "NotAvailableForSubscription"
+    ],
+    "caps": [
+      {
+        "name": "vCPUs",
+        "value": "2"
+      },
+      {
+        "name": "HyperVGenerations",
+        "value": "V1,V2"
+      },
+      {
+        "name": "MemoryGB",
+        "value": "8"
+      },
+      {
+        "name": "CpuArchitectureType",
+        "value": "x64"
+      }
+    ]
+  },
+  {
+    "location": "eastus2",
+    "name": "Standard_D2s_v5",
+    "restrictions": [
+      "NotAvailableForSubscription",
+      "NotAvailableForSubscription"
+    ],
+    "caps": [
+      {
+        "name": "vCPUs",
+        "value": "2"
+      },
+      {
+        "name": "HyperVGenerations",
+        "value": "V1,V2"
+      },
+      {
+        "name": "MemoryGB",
+        "value": "8"
+      },
+      {
+        "name": "CpuArchitectureType",
+        "value": "x64"
+      }
+    ]
+  }
+]
