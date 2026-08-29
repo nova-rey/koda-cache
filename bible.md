@@ -7,3 +7,10 @@ Established the public KODA repository skeleton and documented the accepted dire
 ## 2026-08-28 — R0 spike scaffolding
 
 Started R0 architecture-feasibility execution on branch `r0/architecture-feasibility`. Added an isolated C++20 host safety/evidence seam, a minimal guest raw-I/O helper, Azure/Windows bootstrap scripts, and initial R0 environment documentation. Azure catalog access timed out during read-only preflight; no VM, managed data disk, or destructive storage test was created. R0 remains open pending Windows WHP and disposable-device evidence.
+
+## 2026-08-28 — R0 ownership-sequence correction
+
+The Windows ownership seam now records `FlushFileBuffers` explicitly and verifies
+that the volume is not mounted only after the required lock-and-dismount sequence.
+This remains a compile-guarded feasibility spike; no Windows or destructive
+storage operation has been run from this checkout.

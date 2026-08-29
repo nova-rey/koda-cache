@@ -50,6 +50,7 @@ Result VolumeOwnership::flush_lock_dismount_offline(
     const auto error = GetLastError(); CloseHandle(handle);
     return Result{false, "FlushFileBuffers failed", error};
   }
+  evidence_.record(State::WindowsFlushed, "FlushFileBuffers", "ok");
   DWORD returned = 0;
   if (!DeviceIoControl(handle, FSCTL_LOCK_VOLUME, nullptr, 0, nullptr, 0,
                        &returned, nullptr)) {
@@ -58,23 +59,19 @@ Result VolumeOwnership::flush_lock_dismount_offline(
   }
   locked_ = true;
   evidence_.record(State::WindowsLocked, "FSCTL_LOCK_VOLUME", "ok");
-  // Success means the volume is still mounted. Failure is acceptable only
-  // with ERROR_NOT_READY, which is the positive dismounted observation.
-  if (DeviceIoControl(handle, FSCTL_IS_VOLUME_MOUNTED, nullptr, 0, nullptr, 0,
-                      &returned, nullptr)) {
-    CloseHandle(handle); locked_ = false;
-    return Result{false, "volume remained mounted after lock", 0};
-  }
-  if (GetLastError() != ERROR_NOT_READY) {
-    const auto error = GetLastError(); CloseHandle(handle); locked_ = false;
-    return Result{false, "could not prove volume was dismounted", error};
-  }
   if (!DeviceIoControl(handle, FSCTL_DISMOUNT_VOLUME, nullptr, 0, nullptr, 0,
                        &returned, nullptr)) {
     const auto error = GetLastError(); CloseHandle(handle); locked_ = false;
     return Result{false, "FSCTL_DISMOUNT_VOLUME failed", error};
   }
   evidence_.record(State::WindowsDismounted, "FSCTL_DISMOUNT_VOLUME", "ok");
+  // After the explicit dismount, a mounted query must fail with NOT_READY.
+  SetLastError(ERROR_SUCCESS);
+  if (DeviceIoControl(handle, FSCTL_IS_VOLUME_MOUNTED, nullptr, 0, nullptr, 0,
+                      &returned, nullptr) || GetLastError() != ERROR_NOT_READY) {
+    const auto error = GetLastError(); CloseHandle(handle); locked_ = false;
+    return Result{false, "could not prove volume was dismounted", error};
+  }
   if (!DeviceIoControl(handle, IOCTL_VOLUME_OFFLINE, nullptr, 0, nullptr, 0,
                        &returned, nullptr)) {
     const auto error = GetLastError(); CloseHandle(handle); locked_ = false;
